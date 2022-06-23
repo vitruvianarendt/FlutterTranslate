@@ -14,7 +14,7 @@ class MyApplication extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const MyApp(),
       theme: ThemeData(
-          primarySwatch: Colors.green,
+          primarySwatch: Colors.blueGrey,
         ),
     );
   }
@@ -36,8 +36,13 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 100),
             child: Column(
               children: <Widget>[
-                const Image(image: AssetImage("assets/logo.jpg")),
-                const Padding(padding: EdgeInsets.symmetric(vertical: 50)),
+                const Padding(
+                  padding: EdgeInsets.all(40),
+                  child: Image(image: AssetImage("assets/logo.jpg")),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 30),
+                ),
                 ElevatedButton(
                   child: const Text('Translate Text to German'),
                   onPressed: () {
